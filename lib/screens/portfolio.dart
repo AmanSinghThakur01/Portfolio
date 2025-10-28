@@ -37,14 +37,17 @@ class _PortfolioState extends State<Portfolio> {
           ),
         ) : null,
       body: SingleChildScrollView(
-        child: Column(
-          children: [
-            Wrap(
-              children: [
-                Education(),
-              ],
-            ),
-          ],
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            children: [
+              Wrap(
+                children: [
+                  Education(),
+                ],
+              ),
+            ],
+          ),
         ),
       )
     );
