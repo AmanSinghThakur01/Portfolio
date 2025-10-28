@@ -90,6 +90,8 @@ flutter:
           weight: 800
         - asset: assets/poppins.bold.ttf
           weight: 900
+        - asset: assets/poppins.italic.ttf
+          weight: 300
 
   #   - family: Trajan Pro
   #     fonts:
