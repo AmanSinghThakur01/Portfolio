@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:portfolio/utils/socialrow.dart';
+
 class About extends StatefulWidget {
   const About({super.key});
 
@@ -13,11 +15,12 @@ class _AboutState extends State<About> {
     final screenWidth = MediaQuery.of(context).size.width;
 
     return Container(
-      margin: EdgeInsets.only(
-        top: 20.0,
-      ),
+      margin: EdgeInsets.only(top: 20.0),
       width: screenWidth < 900 ? screenWidth * 0.9 : screenWidth * 0.3,
-      decoration: const BoxDecoration(color: Colors.white),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(20),
+        color: Colors.white, ),
+      padding: EdgeInsets.all(30),
       child: Column(
         children: [
           Image.asset("assets/dev.png", height: 156),
@@ -31,56 +34,46 @@ class _AboutState extends State<About> {
             style: TextStyle(fontSize: 22, fontWeight: FontWeight.w300),
           ),
           Container(
+            margin: EdgeInsets.all(12),
             padding: EdgeInsets.symmetric(horizontal: 8, vertical: 8),
             decoration: BoxDecoration(
-              color: Colors.yellow.shade400,
+              color: Colors.tealAccent.shade200,
               borderRadius: BorderRadius.circular(4),
             ),
-            child: Text('Flutter Developer'),
+            child: Text( 'Flutter Developer',style: TextStyle(fontSize: 16, color: Colors.grey.shade900 ),),
           ),
           Divider(),
           Container(
             child: Row(
-
               children: [
                 Padding(
                   padding: const EdgeInsets.all(12.0),
-                  child: Card(child: Icon(FontAwesomeIcons.github, size: 20,)),
+                  child: Card(child: Icon(FontAwesomeIcons.github, size: 20)),
                 ),
-                SizedBox(width: 12.0,),
+                SizedBox(width: 12.0),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text("Github"),
-                    Text("Aman Singh Thakur01"),
-                  ],
-                )
+                  children: [Text("Github"), Text("Aman Singh Thakur01")],
+                ),
               ],
             ),
           ),
           Container(
             child: Row(
-
               children: [
                 Padding(
                   padding: const EdgeInsets.all(12.0),
-                  child: Card(child: Icon(FontAwesomeIcons.github, size: 20,)),
+                  child: Card(child: Icon(FontAwesomeIcons.github, size: 20)),
                 ),
-                SizedBox(width: 12.0,),
+                SizedBox(width: 12.0),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text("Github"),
-                    Text("Aman Singh Thakur01"),
-                  ],
-                )
+                  children: [Text("Github"), Text("Aman Singh Thakur01")],
+                ),
               ],
             ),
-          )
-          ,
-
-         
-
+          ),
+          Socialrow(),
         ],
       ),
     );

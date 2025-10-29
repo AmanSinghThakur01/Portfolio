@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
 
         colorScheme: ColorScheme.fromSeed(
           seedColor: Colors.purple,
-          surface: Colors.purple.shade50,
+          surface: Colors.purple.shade100,
         ),
         useMaterial3: true,
         fontFamily: "custom",

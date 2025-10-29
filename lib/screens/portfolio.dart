@@ -28,7 +28,17 @@ class _PortfolioState extends State<Portfolio> {
         .width > 700 ? false : true;
     return Scaffold(
         appBar: AppBar(
-          title: Text("Aman Singh Thakur"),
+          backgroundColor: Colors.white,
+          elevation: 2,
+          centerTitle: true,
+          title: const Text(
+            "Aman Singh Thakur | Portfolio",
+            style: TextStyle(
+              color: Colors.black87,
+              fontWeight: FontWeight.bold,
+              letterSpacing: 0.5,
+            ),
+          ),
           actions: isMobile ? null : navItems,
         ),
         drawer: isMobile ?
@@ -40,16 +50,18 @@ class _PortfolioState extends State<Portfolio> {
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(8.0),
-          child: Column(
-            children: [
-              Wrap(
-                alignment: WrapAlignment.center,
-                children: [
-                  About(),
-                  Education(),
-                ],
-              ),
-            ],
+          child: Center(
+            child: Column(
+              children: [
+                Wrap(
+                  alignment: WrapAlignment.center,
+                  children: [
+                    About(),
+                    Education(),
+                  ],
+                ),
+              ],
+            ),
           ),
         ),
       )
