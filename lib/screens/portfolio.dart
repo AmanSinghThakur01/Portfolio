@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/screens/about.dart';
 import 'package:portfolio/screens/education.dart';
 class Portfolio extends StatefulWidget {
   const Portfolio({super.key});
@@ -42,7 +43,9 @@ class _PortfolioState extends State<Portfolio> {
           child: Column(
             children: [
               Wrap(
+                alignment: WrapAlignment.center,
                 children: [
+                  About(),
                   Education(),
                 ],
               ),
