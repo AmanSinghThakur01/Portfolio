@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:portfolio/utils/animated_contact.dart';
 import 'package:portfolio/utils/socialrow.dart';
 
 class About extends StatefulWidget {
@@ -73,6 +74,7 @@ class _AboutState extends State<About> {
               ],
             ),
           ),
+          AnimatedContact(),
           Socialrow(),
         ],
       ),
