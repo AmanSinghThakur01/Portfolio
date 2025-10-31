@@ -72,14 +72,30 @@ class _AboutState extends State<About> {
             iconWidget: Icon(FontAwesomeIcons.linkedinIn),
             title: "Linkedin",
             subtitle: " Aman Singh Thakur",
-            ontap: () {},
+            ontap: () async {
+              final url = Uri.parse("https://www.linkedin.com/in/aman-singh-thakur-a42308303/");
+              if (await canLaunchUrl(url)) {
+                await launchUrl(url, mode: LaunchMode.externalApplication);
+              } else {
+                throw 'Could not launch $url';
+              }
+            },
+
             iconColor: Colors.indigo,
           ),  AnimatedContact(
             iconWidget: Image.asset("assets/instagram.png", height: 25,),
 
             title: "Instagram",
             subtitle: "thakur.amansinghh",
-            ontap: () {},
+            ontap: () async {
+              final url = Uri.parse("https://www.instagram.com/thakur.amansinghh?igsh=MTMxYmdwMGgxYjQ5Yg%3D%3D");
+              if (await canLaunchUrl(url)) {
+                await launchUrl(url, mode: LaunchMode.externalApplication);
+              } else {
+                throw 'Could not launch $url';
+              }
+            },
+
             iconColor: Colors.indigo,
           ),
           Socialrow(),
