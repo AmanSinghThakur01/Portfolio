@@ -20,7 +20,8 @@ class _AboutState extends State<About> {
       width: screenWidth < 900 ? screenWidth * 0.9 : screenWidth * 0.3,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
-        color: Colors.white, ),
+        color: Colors.white,
+      ),
       padding: EdgeInsets.all(30),
       child: Column(
         children: [
@@ -29,10 +30,10 @@ class _AboutState extends State<About> {
             " Aman",
             style: TextStyle(fontSize: 30, fontWeight: FontWeight.w600),
           ),
-          const Text(
-            "I am a Flutter Developer seeking an internship or full-time opportunity in Indore. ",
+          const SelectableText(
+            "I am a Flutter Developer seeking an internship or full-time opportunity in Indore. I build cross-platform mobile applications using the Flutter framework, with Provider for state management and Firebase for backend services and integrations. ",
             textAlign: TextAlign.center,
-            style: TextStyle(fontSize: 22, fontWeight: FontWeight.w300),
+            style: TextStyle(fontSize: 18, fontWeight: FontWeight.w300),
           ),
           Container(
             margin: EdgeInsets.all(12),
@@ -41,7 +42,10 @@ class _AboutState extends State<About> {
               color: Colors.tealAccent.shade200,
               borderRadius: BorderRadius.circular(4),
             ),
-            child: Text( 'Flutter Developer',style: TextStyle(fontSize: 16, color: Colors.grey.shade900 ),),
+            child: Text(
+              'Flutter Developer',
+              style: TextStyle(fontSize: 16, color: Colors.grey.shade900),
+            ),
           ),
           Divider(),
           Container(
@@ -74,7 +78,13 @@ class _AboutState extends State<About> {
               ],
             ),
           ),
-          AnimatedContact(),
+          AnimatedContact(
+            iconData: FontAwesomeIcons.linkedinIn,
+            title: "Linkedin",
+            subtitle: " Aman Singh Thakur",
+            ontap: () {},
+            iconColor: Colors.indigo,
+          ),
           Socialrow(),
         ],
       ),
