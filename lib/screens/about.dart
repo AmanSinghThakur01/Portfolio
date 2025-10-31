@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:portfolio/utils/animated_contact.dart';
 import 'package:portfolio/utils/socialrow.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class About extends StatefulWidget {
+  
   const About({super.key});
 
   @override
@@ -13,6 +15,8 @@ class About extends StatefulWidget {
 class _AboutState extends State<About> {
   @override
   Widget build(BuildContext context) {
+
+    
     final screenWidth = MediaQuery.of(context).size.width;
 
     return Container(
@@ -48,40 +52,33 @@ class _AboutState extends State<About> {
             ),
           ),
           Divider(),
-          Container(
-            child: Row(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.all(12.0),
-                  child: Card(child: Icon(FontAwesomeIcons.github, size: 20)),
-                ),
-                SizedBox(width: 12.0),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [Text("Github"), Text("Aman Singh Thakur01")],
-                ),
-              ],
-            ),
-          ),
-          Container(
-            child: Row(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.all(12.0),
-                  child: Card(child: Icon(FontAwesomeIcons.github, size: 20)),
-                ),
-                SizedBox(width: 12.0),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [Text("Github"), Text("Aman Singh Thakur01")],
-                ),
-              ],
-            ),
-          ),
+
           AnimatedContact(
-            iconData: FontAwesomeIcons.linkedinIn,
+            iconWidget: const Icon(FontAwesomeIcons.github),
+            title: "Github",
+            subtitle: "Aman Singh Thakur01",
+            iconColor: Colors.indigo,
+            ontap: () async {
+              final url = Uri.parse("https://github.com/AmanSinghThakur01");
+              if (await canLaunchUrl(url)) {
+                await launchUrl(url, mode: LaunchMode.externalApplication);
+              } else {
+                throw 'Could not launch $url';
+              }
+            },
+          ),
+
+          AnimatedContact(
+            iconWidget: Icon(FontAwesomeIcons.linkedinIn),
             title: "Linkedin",
             subtitle: " Aman Singh Thakur",
+            ontap: () {},
+            iconColor: Colors.indigo,
+          ),  AnimatedContact(
+            iconWidget: Image.asset("assets/instagram.png", height: 25,),
+
+            title: "Instagram",
+            subtitle: "thakur.amansinghh",
             ontap: () {},
             iconColor: Colors.indigo,
           ),

@@ -10,7 +10,9 @@ class Socialrow extends StatelessWidget {
      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         FaIcon(FontAwesomeIcons.facebook),
+        SizedBox(width: 13,),
         FaIcon(FontAwesomeIcons.instagram),
+        SizedBox(width: 13,),
         FaIcon(FontAwesomeIcons.twitter),
       ],
     );
