@@ -82,10 +82,11 @@ class _AboutState extends State<About> {
             },
 
             iconColor: Colors.indigo,
-          ),  AnimatedContact(
+          ),
+          AnimatedContact(
             iconWidget: Image.asset("assets/instagram.png", height: 25,),
 
-            title: "Instagram",
+            title: "Instagram",  
             subtitle: "thakur.amansinghh",
             ontap: () async {
               final url = Uri.parse("https://www.instagram.com/thakur.amansinghh?igsh=MTMxYmdwMGgxYjQ5Yg%3D%3D");

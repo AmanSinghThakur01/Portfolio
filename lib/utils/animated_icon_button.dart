@@ -2,17 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class AnimatedIconButton extends StatefulWidget {
-  final Widget iconWidget ;
-  final Color iconColor ;
-  final String title ;
-  final String subtitle ;
+  final IconData iconData ;
   final VoidCallback ontap ;
 
+
   const AnimatedIconButton({super.key
-  , required this.iconWidget ,
-    required this.iconColor ,
-    required this.title ,
-    required this .subtitle,
+  , required this.iconData ,
     required  this.ontap,
   });
 
@@ -42,17 +37,7 @@ Widget build(BuildContext context) {
         children: [
           Padding(
               padding: const EdgeInsets.all(12.0),
-              child: Card( child: widget.iconWidget,)
-          ),
-          SizedBox(width: 12.0),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [Text(widget.title , style: TextStyle( fontSize: 18.0),),
-              Text(widget.subtitle)
-              ,
-
-            ],
-
+              child: Card( child:Icon(widget.iconData),),
           ),
         ],
       ),

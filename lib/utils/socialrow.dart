@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:portfolio/utils/animated_icon_button.dart';
 class Socialrow extends StatelessWidget {
   const Socialrow({super.key});
 
@@ -9,11 +10,10 @@ class Socialrow extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
      mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        FaIcon(FontAwesomeIcons.facebook),
-        SizedBox(width: 13,),
-        FaIcon(FontAwesomeIcons.instagram),
-        SizedBox(width: 13,),
-        FaIcon(FontAwesomeIcons.twitter),
+        AnimatedIconButton(iconData: FontAwesomeIcons.facebook, ontap: (){},),
+        AnimatedIconButton(iconData: FontAwesomeIcons.x, ontap: (){},),
+        AnimatedIconButton(iconData: Icons.mail, ontap: (){},),
+
       ],
     );
   }
